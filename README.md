@@ -2,19 +2,16 @@
 
 A deep learning approach for identifying suspicious financial transactions in anti money laundering (AML) systems. This project compares multiple architectures — Dense Neural Networks, LSTMs, and CNN-LSTM hybrids — to detect subtle, temporally-sensitive anomalies in realistic synthetic transaction data.
 
----
 
 ## 🎯 Objective
 
 To design, develop, and evaluate a robust deep learning framework capable of detecting suspicious financial transactions, improving upon traditional rule-based and classical ML systems by leveraging both temporal and behavioral cues in transaction data.
 
----
 
 ## 🧾 Abstract
 
 This project presents a hybrid deep learning model that combines Convolutional Neural Networks (CNN) with Long Short-Term Memory (LSTM) networks to detect suspicious transactions within the SAML-D synthetic AML dataset. The hybrid model exploits CNNs for detecting localized anomalies and LSTMs for learning long-term behavioral patterns in transaction sequences. Through rigorous preprocessing, feature engineering, and resampling techniques, the model achieves improved precision, recall, and PR AUC scores, making it suitable for real-world financial monitoring scenarios.
 
----
 
 ## 📦 Dataset
 
@@ -27,7 +24,6 @@ This project presents a hybrid deep learning model that combines Convolutional N
 
 **[Dataset](https://www.kaggle.com/datasets/berkanoztas/synthetic-transaction-monitoring-dataset-aml)** - This dataset was designed with guidance from AML experts to simulate realistic laundering scenarios, preserving privacy while offering structural and statistical authenticity.
 
----
 
 ## 🔬 Approach
 
@@ -53,7 +49,6 @@ This project presents a hybrid deep learning model that combines Convolutional N
    - Used early stopping with PR AUC as the primary metric  
    - Evaluation based on ROC AUC, PR AUC, precision, recall, and F1-score
 
----
 
 ## 🧰 Key Technologies
 
@@ -64,7 +59,6 @@ This project presents a hybrid deep learning model that combines Convolutional N
 - Scikit-learn (for metrics and preprocessing)
 - Jupyter Notebooks
 
----
 
 ## 🏗️ Models and Rationale
 
@@ -74,7 +68,6 @@ This project presents a hybrid deep learning model that combines Convolutional N
 | **LSTM**            | Learns temporal patterns from grouped sender sequences (2 LSTM layers, dropout, batch norm)                  | Captures time-dependency in transactions                   | Misses short-term/localized anomalies        |
 | **Hybrid CNN-LSTM** | Parallel branches: Conv1D layers capture localized trends, LSTM captures sequence dependencies; merged layer | Best of both worlds—detects both local and global behaviors | More complex, higher training cost           |
 
----
 
 ## 📊 Performance Summary
 
@@ -87,7 +80,6 @@ This project presents a hybrid deep learning model that combines Convolutional N
 
 Threshold tuning on the hybrid model produced the best F1-score, reducing false positives and false negatives.
 
----
 
 ## 🔍 Key Findings
 
@@ -96,7 +88,6 @@ Threshold tuning on the hybrid model produced the best F1-score, reducing false 
 - Feature engineering (e.g., cyclic time features and behavioral stats) played a crucial role in boosting model performance.
 - Class imbalance mitigation and careful threshold tuning greatly influenced final model accuracy and stability.
 
----
 
 ## 🚀 Future Enhancements
 
